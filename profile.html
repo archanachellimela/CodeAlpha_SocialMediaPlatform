@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Profile</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<h2>Profile</h2>
+
+<a href="home.html">
+Back
+</a>
+
+<button onclick="logout()">
+Logout
+</button>
+
+<div id="profile"></div>
+
+<script src="script.js"></script>
+
+<script>
+
+if(!localStorage.getItem("token")) {
+
+    window.location.href = "login.html";
+}
+
+loadProfile();
+
+</script>
+
+</body>
+</html>

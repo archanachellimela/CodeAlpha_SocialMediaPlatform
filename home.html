@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Home</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<h2>Social Feed</h2>
+
+<button onclick="logout()">
+Logout
+</button>
+
+<a href="profile.html">
+My Profile
+</a>
+
+<hr>
+
+<textarea
+id="postContent"
+placeholder="Write post">
+</textarea>
+
+<button onclick="createPost()">
+Post
+</button>
+
+<hr>
+
+<div id="posts"></div>
+
+<script src="script.js"></script>
+
+<script>
+
+if(!localStorage.getItem("token")) {
+
+    window.location.href = "login.html";
+}
+
+loadPosts();
+
+</script>
+
+</body>
+</html>
